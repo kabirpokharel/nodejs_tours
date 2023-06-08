@@ -10,10 +10,10 @@ router.param('id', checkID);
 
 const checkBody = (req, res, next) => {
   console.log('req.body   == = = > ', req.body);
-  const {name,price} = req.body;
-  if(name && (!isNaN(price)){
+  const { name, price } = req.body;
+  if (name && !isNaN(price)) {
     next();
-  }else{
+  } else {
     return;
   }
 };
